@@ -1,0 +1,36 @@
+{
+    "editor.fontSize": 24,
+    "code-runner.saveFileBeforeRun": true,
+    "workbench.colorTheme": "Dracula Soft",
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+
+  "background.enabled": true,
+    "background.loop": false,
+    "background.useDefault": false,
+    "background.useFront": false,
+    "background.style": {
+          "content": "''",
+          "pointer-events": "none",
+          "position": "absolute",
+          "z-index": "99999",
+          "width": "35%",
+          "height": "90%",
+          "right": 0,
+          "bottom":0,
+          "background-position": "right",
+          "background-size": "50%",
+          "background-repeat": "no-repeat",
+          "opacity": 0.2,
+         
+        },
+        "background.customImages": [
+            "file:///C:/rick.png"
+          ],
+       
+        "window.zoomLevel": -1,
+        "liveServer.settings.donotShowInfoMsg": true
+      }

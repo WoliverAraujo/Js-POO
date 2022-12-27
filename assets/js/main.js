@@ -1,27 +1,26 @@
-class DispositivoEletronico {
-    constructor(nome) {
-        this.nome = nome;
-        this.ligado = false;
+class controleRemoto {
+    constructor(tv) {
+        this.tv=tv;
+        this.volume = 0;
+    }
+    //Método de Instância
+    aumentarVolume (){
+        this.volume += 2;
+    }
+    dinuirVolume (){
+        this.volume -= 2;
     }
 
-    ligar() {
-        if (this.ligado) {
-            console.log(this.nome + ' esta ligado');
-            return;
-        }
-        this.ligado = true;
-    }
-
-    desligar (){
-        if (!this.ligado) {
-            console.log(this.nome + ' esta desligado');
-            return;
-        }
-        this.ligado = false;
-
+    //Método estático
+    static trocaPilha (){
+        console.log('Pilha está acabando.')
     }
 }
 
-class Alexa extends DispositivoEletronico {}
-const s1 = new Alexa ('Echo Dot');
-console.log(s1);
+const controle1 = new controleRemoto ('LG');
+controle1.aumentarVolume ();
+controle1.aumentarVolume ();
+controle1.aumentarVolume ();
+console.log(controle1)
+
+controleRemoto.trocaPilha();

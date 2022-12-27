@@ -2,22 +2,19 @@ class Pessoa {
     constructor (nome, sobrenome) {
         this.nome = nome;
         this.sobrenome = sobrenome;
-    };
-
-    falar () {
-        console.log(`${this.nome} está falando.`);
     }
-};
 
-function Pessoa2 (nome, sobrenome) {
-    this.nome = nome;
-    this.sobrenome = sobrenome;
-}
+    get nomeCompleto () {
+        return this.nome + ' ' + this.sobrenome;
+    }
 
-Pessoa2.prototype.falar = function () {
-    console.log(`${this.nome} está falando`)
+    set nomeCompleto (valor) {
+        valor = valor.split(' ');
+        this.nome = valor.shift();
+        this.sobrenome = valor.join(' ');
+    }
 }
 
 const p1 = new Pessoa ('Woliver', 'Araujo');
-const p2 = new Pessoa2 ('Thiago', 'Cardoso')
-console.log (p1);
+p1.nomeCompleto = 'Woliver Araujo'
+console.log(p1.nomeCompleto);
